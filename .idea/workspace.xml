@@ -14,17 +14,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="442">
@@ -36,9 +25,39 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="6" lean-forward="true" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="-1887">
+                <folding>
+                  <element signature="e#0#41#0" expanded="true" />
+                  <element signature="e#0#41#0" expanded="true" />
+                  <element signature="e#0#26#0" expanded="true" />
+                  <element signature="e#0#42#0" expanded="true" />
+                  <element signature="e#0#26#0" expanded="true" />
+                  <element signature="e#0#35#0" expanded="true" />
+                  <element signature="e#0#26#0" expanded="true" />
+                  <element signature="e#0#26#0" expanded="true" />
+                  <element signature="n#!!doc" expanded="true" />
+                  <element signature="e#0#26#0" expanded="true" />
+                  <element signature="e#0#26#0" expanded="true" />
+                  <element signature="e#0#28#0" expanded="true" />
+                  <element signature="e#0#28#0" expanded="true" />
+                </folding>
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -124,6 +143,13 @@
       </list>
     </option>
   </component>
+  <component name="ProjectConfigurationFiles">
+    <option name="files">
+      <list>
+        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
+      </list>
+    </option>
+  </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="827" />
     <option name="y" value="26" />
@@ -199,12 +225,12 @@
       <workItem from="1562240017569" duration="3611000" />
       <workItem from="1562244894241" duration="10395000" />
       <workItem from="1562772160046" duration="10000" />
-      <workItem from="1562854393834" duration="1717000" />
+      <workItem from="1562854393834" duration="2061000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15733000" />
+    <option name="totallyTimeSpent" value="16077000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -318,7 +344,35 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="6" lean-forward="true" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-1887">
+            <folding>
+              <element signature="e#0#41#0" expanded="true" />
+              <element signature="e#0#41#0" expanded="true" />
+              <element signature="e#0#26#0" expanded="true" />
+              <element signature="e#0#42#0" expanded="true" />
+              <element signature="e#0#26#0" expanded="true" />
+              <element signature="e#0#35#0" expanded="true" />
+              <element signature="e#0#26#0" expanded="true" />
+              <element signature="e#0#26#0" expanded="true" />
+              <element signature="n#!!doc" expanded="true" />
+              <element signature="e#0#26#0" expanded="true" />
+              <element signature="e#0#26#0" expanded="true" />
+              <element signature="e#0#28#0" expanded="true" />
+              <element signature="e#0#28#0" expanded="true" />
+            </folding>
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>

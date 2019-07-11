@@ -70,7 +70,7 @@ class App extends Component {
               age={this.state.persons[1].age}
               click={this.switchNameHandler.bind(this, 'YETTTTT')}
               changed={this.nameChangedHandler}>
-            My Hobbies : licking clit</Person>
+            My Hobbies : licking</Person>
           <Person
               name={this.state.persons[2].name}
               age={this.state.persons[2].age}/>
