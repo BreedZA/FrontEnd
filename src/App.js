@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import './App.css';
 import Person from './Person/Person';
+import Validation from './Validation/Validation';
 
 class App extends Component {
 
@@ -14,6 +15,7 @@ class App extends Component {
     otherState: 'some other value',
     showPerons: false,
     userInput:''
+
   }
 
   deletePersonHandler = (personIndex) => {
@@ -46,7 +48,26 @@ class App extends Component {
   togglePersonsHandler = () => {
     const doesShow = this.state.showPerons;
     this.setState({showPerons: !doesShow});
-  }
+  };
+  /*
+    * the Assingment method will be bellow to the  next stars
+    *
+    * */
+
+
+  inputUserNameHandler = (event) => {
+    this.setState({userInput: event.target.value})
+  };
+
+
+
+
+
+
+
+  /*****************************************************************/
+
+
 
   render() {
 
@@ -80,22 +101,7 @@ class App extends Component {
 
       );
     }
-    /*
-    * the Assingment method will be bellow to the  next stars
-    *
-    * */
-    inputChangedHandler = (event) => {
 
-    }
-
-
-
-
-
-
-
-
-    /*****************************************************************/
     return (
       <div className="App">
       <h1> Hi, im yeeting with react now</h1>
@@ -106,7 +112,16 @@ class App extends Component {
         <div className="Box">
             {persons}
         </div>
-        <input type="text" onChange={} />
+
+        <input type="text"
+               onChange={this.inputUserNameHandler}
+                  value={this.state.userInput}
+        />
+        <p>
+          {this.state.userInput}
+        </p>
+        <Validation inputLength={this.state.userInput.length}/>
+
       </div>
     );
 
