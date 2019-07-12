@@ -7,33 +7,41 @@ class App extends Component {
 
   state = {
     persons : [
-      {name: 'Andrew', age: 23},
-      {name: 'Stuart', age: 13},
-      {name: 'Bran', age: 53}
+      { id: 'aaa' ,name: 'Andrew', age: 23},
+      { id: 'bbb',name: 'Stuart', age: 13},
+      { id: 'ccc',name: 'Bran', age: 53}
     ],
     otherState: 'some other value',
-    showPerons: false
-  }
-  switchNameHandler = (newName) => {
-    //console.log('Was clicked!');
-    // dont do this !! :this.state.persons[0].name = 'Andy'
-
-    this.setState({persons : [
-        {name: newName, age: 63},
-        {name: 'james', age: 73},
-        {name: 'kev', age: 83}
-      ]
-    })
+    showPerons: false,
+    userInput:''
   }
 
-  nameChangedHandler = (event) => {
-    this.setState({persons : [
-        {name: 'Mia', age: 63},
-        {name: event.target.value, age: 73},
-        {name: 'kev', age: 83}
-      ]
-    })
-  }
+  deletePersonHandler = (personIndex) => {
+    //const persons = this.state.persons.slice(); below is the modern approach to
+    // to copy an array into a new one before manulipulating it
+    const persons = [...this.state.persons]
+    persons.splice(personIndex, 1);
+    this.setState({persons :persons})
+  };
+
+  nameChangedHandler = (event, id) => {
+    const personIndex = this.state.persons.findIndex(p => {
+      return p.id === id;
+    });
+    // using the spread operator
+    const person = {
+      ...this.state.persons[personIndex]
+    };
+    // alternative method below for the above three lines of code
+    // const person = Object.assign({}, this.state.persons[personIndex])
+    person.name = event.target.value;
+    // fetching the array to be updated
+    const persons = [...this.state.persons];
+    // at one position
+    persons[personIndex] = person;
+
+    this.setState({persons : persons})
+  };
 
   togglePersonsHandler = () => {
     const doesShow = this.state.showPerons;
@@ -50,38 +58,58 @@ class App extends Component {
       padding: '8px',
       cursor: 'pointer'
         };
-    //
+    //// map() allows on arrays , to match your array into an array of jsx elements
+    // need key to let react update everything effectively
+    let persons =null;
+    if(this.state.showPerons){
+      persons = (
+          <div>
+
+            {this.state.persons.map((person, index) => {
+              return <Person
+                  click={ () => this.deletePersonHandler(index)}
+                  name={person.name}
+                  age={person.age}
+                  // used with the ID from the database
+                key={person.id}
+                  changed={(event) => this.nameChangedHandler(event, person.id)}
+              />
+            })}
+
+          </div>
+
+      );
+    }
+    /*
+    * the Assingment method will be bellow to the  next stars
+    *
+    * */
+    inputChangedHandler = (event) => {
+
+    }
+
+
+
+
+
+
+
+
+    /*****************************************************************/
     return (
       <div className="App">
       <h1> Hi, im yeeting with react now</h1>
           <p> This is really working!</p>
         <button style={style}
             className=""
-                onClick={() => this.togglePersonsHandler()}>Toggle persons</button>
-
-        {
-          this.state.showPerons === true ?
-          <div>
-          <Person
-              name={this.state.persons[0].name}
-              age={this.state.persons[0].age}/>
-          <Person
-              name={this.state.persons[1].name}
-              age={this.state.persons[1].age}
-              click={this.switchNameHandler.bind(this, 'YETTTTT')}
-              changed={this.nameChangedHandler}>
-            My Hobbies : licking</Person>
-          <Person
-              name={this.state.persons[2].name}
-              age={this.state.persons[2].age}/>
-        </div> : null
-        }
-
+                onClick={this.togglePersonsHandler}>Toggle persons</button>
+        <div className="Box">
+            {persons}
+        </div>
+        <input type="text" onChange={} />
       </div>
     );
-    // the code above gets compiled to the code below
-   /* return React.createElement('div' , {className : 'App'},
-        React.createElement('h1', null, 'hey im react') )*/
+
   }
 }
 
